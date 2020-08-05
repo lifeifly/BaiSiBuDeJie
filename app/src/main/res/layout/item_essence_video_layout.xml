@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:circle="http://schemas.android.com/apk/res/com.example.baisibudejie"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical">
 
     <LinearLayout
@@ -12,6 +12,7 @@
         android:orientation="horizontal">
 
         <com.example.baisibudejie.projects.home.view.views.CircleNetWorkImageView
+            android:id="@+id/iv_header"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_marginLeft="12dp"
@@ -85,8 +86,8 @@
                 android:id="@+id/iv_like"
                 android:layout_width="26dp"
                 android:layout_height="26dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/like_normal" />
+                android:scaleType="fitXY"
+                android:src="@drawable/essence_ding_selector" />
 
             <TextView
                 android:id="@+id/tv_like"
@@ -108,7 +109,7 @@
                 android:id="@+id/iv_dislike"
                 android:layout_width="26dp"
                 android:layout_height="26dp"
-                android:scaleType="centerCrop"
+                android:scaleType="fitXY"
                 android:src="@drawable/dislike_normal" />
 
             <TextView
@@ -131,7 +132,7 @@
                 android:id="@+id/iv_forword"
                 android:layout_width="26dp"
                 android:layout_height="26dp"
-                android:scaleType="centerCrop"
+                android:scaleType="fitXY"
                 android:src="@drawable/share" />
 
             <TextView
@@ -154,7 +155,7 @@
                 android:id="@+id/iv_comment"
                 android:layout_width="26dp"
                 android:layout_height="26dp"
-                android:scaleType="centerCrop"
+                android:scaleType="fitXY"
                 android:src="@drawable/like_normal" />
 
             <TextView
