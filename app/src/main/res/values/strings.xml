@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">BaiSiBuDeJie</string>
+    <string name="title_activity_launch">LaunchActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>\
+
+    <!--tab-->
+    <string name="main_home_text">首页</string>
+    <string name="main_essence_text">新帖</string>
+    <string name="main_attention_text">关注</string>
+    <string name="main_mine_text">我的</string>
+    <string name="main_publish_text">发布</string>
+
+    <string-array name="essence_video_tab">
+        <item>全部@dream@0</item>
+        <item>视频@dream@1</item>
+        <item>声音@dream@2</item>
+        <item>图片@dream@3</item>
+        <item>段子@dream@4</item>
+        <item>广告@dream@5</item>
+        <item>剧情@dream@6</item>
+    </string-array>
+
+    <string-array name="newpost_video_tab">
+        <item>美女@dream@0</item>
+        <item>搞笑@dream@1</item>
+        <item>视频@dream@2</item>
+        <item>段子@dream@3</item>
+        <item>城市@dream@4</item>
+        <item>农村@dream@5</item>
+        <item>青春@dream@6</item>
+    </string-array>
+    <string-array name="attention_video_tab">
+        <item>订阅@dream@0</item>
+        <item>关注@dream@1</item>
+    </string-array>
+</resources>
