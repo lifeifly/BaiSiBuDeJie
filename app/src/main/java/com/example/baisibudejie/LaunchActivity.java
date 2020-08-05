@@ -6,6 +6,9 @@ import android.animation.ObjectAnimator;
 import android.content.Intent;
 import android.os.Bundle;
 
+import com.example.baisibudejie.bean.PostListBean;
+import com.example.baisibudejie.projects.base.presenter.BasePresenter;
+import com.example.baisibudejie.projects.home.presenter.EssenceVideoPresenter;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
@@ -16,12 +19,16 @@ import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 
+import java.util.List;
+
 public class LaunchActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_launch);
+        //android6.0及以上需要动态申请权限
+
         //属性动画
         /**target 你要对哪个View绑定动画，对imageView绑定动画
          *propertyNmae 你要执行什么动画属性名称  例如缩放、平移
@@ -66,5 +73,6 @@ public class LaunchActivity extends AppCompatActivity {
                 startActivity(new Intent(LaunchActivity.this, MainActivity.class));
             }
         });
+
     }
 }
