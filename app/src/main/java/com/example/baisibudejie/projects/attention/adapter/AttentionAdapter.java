@@ -6,10 +6,12 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
 
-import com.example.baisibudejie.projects.essence.view.NewPostVideoFragment;
+import com.example.baisibudejie.projects.attention.view.AttentionSubscriptionFragment;
+import com.example.baisibudejie.projects.attention.view.AttentionVideoFragment;
+import com.example.baisibudejie.projects.newpost.view.NewPostVideoFragment;
 
 import java.util.List;
-
+//关注适配器--初始化ViewPager，加载Fragment
 public class AttentionAdapter extends FragmentStatePagerAdapter {
     private static final String TAB_TAG = "@dream@";
     private List<String> mTitles;
@@ -22,7 +24,14 @@ public class AttentionAdapter extends FragmentStatePagerAdapter {
     @NonNull
     @Override
     public Fragment getItem(int position) {
-        NewPostVideoFragment fragment = new NewPostVideoFragment();
+        if (position==0) {
+            AttentionSubscriptionFragment fragment = new AttentionSubscriptionFragment();
+            String[] title = mTitles.get(position).split(TAB_TAG);
+            fragment.setmType(Integer.parseInt(title[1]));
+            fragment.setmTitle(title[0]);
+            return fragment;
+        }
+        AttentionVideoFragment fragment = new AttentionVideoFragment();
         String[] title = mTitles.get(position).split(TAB_TAG);
         fragment.setmType(Integer.parseInt(title[1]));
         fragment.setmTitle(title[0]);

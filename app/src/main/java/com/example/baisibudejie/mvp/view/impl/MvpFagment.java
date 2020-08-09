@@ -12,21 +12,27 @@ import com.example.baisibudejie.mvp.view.MvpView;
 
 public abstract class MvpFagment<P extends MvpBasePresenter> extends Fragment implements MvpView {
     protected P presenter;
+
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         //绑定视图
-        presenter=bindPresenter();
-        if (presenter!=null){
+        presenter = bindPresenter();
+        if (presenter != null) {
             presenter.attachView(this);
         }
     }
+
     public abstract P bindPresenter();
+
+    public P getPresenter() {
+        return presenter;
+    }
 
     @Override
     public void onDestroyView() {
         super.onDestroyView();
-        if (presenter!=null){
+        if (presenter != null) {
             presenter.detachView();
         }
     }

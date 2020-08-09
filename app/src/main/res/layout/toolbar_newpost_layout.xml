@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="50dp"
     android:orientation="horizontal"
-    android:background="@color/main_bottom_bg">
+    android:background="@android:color/white">
 
     <LinearLayout
         android:layout_width="0dp"
@@ -17,7 +17,7 @@
             android:layout_width="25dp"
             android:layout_height="25dp"
             android:layout_marginLeft="12dp"
-            android:src="@mipmap/newpost_left" />
+            android:src="@drawable/main_newpost_audit_btn_selector" />
     </LinearLayout>
 
     <LinearLayout
@@ -31,7 +31,7 @@
             android:id="@+id/iv_title"
             android:layout_width="128dp"
             android:layout_height="22dp"
-            android:background="@drawable/icon_splash"/>
+            android:background="@drawable/main_essence_title"/>
     </LinearLayout>
 
     <LinearLayout

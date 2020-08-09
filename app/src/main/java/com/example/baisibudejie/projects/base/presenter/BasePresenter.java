@@ -5,22 +5,35 @@ import android.content.Context;
 import com.example.baisibudejie.mvp.presenter.MvpPresenter;
 import com.example.baisibudejie.mvp.presenter.impl.MvpBasePresenter;
 import com.example.baisibudejie.mvp.view.MvpView;
+import com.example.baisibudejie.projects.base.model.BaseModel;
 import com.google.gson.Gson;
 
-public abstract class BasePresenter<V extends MvpView> extends MvpBasePresenter<V> {
+public abstract class BasePresenter<V extends BaseModel> extends MvpBasePresenter {
     private Context context;
     private Gson gson;
-    public BasePresenter(Context context){
-        this.context=context;
-        this.gson=new Gson();
+    private V model;
+
+    public BasePresenter(Context context) {
+        this.context = context;
+        this.gson = new Gson();
+        this.model = bindModel();
     }
-    public Context getContext(){
+
+    public Context getContext() {
         return context;
     }
-    public Gson getGson(){
+
+    public Gson getGson() {
         return gson;
     }
-    public interface OnUIThreadListener<T>{
+
+    public V getModel() {
+        return model;
+    }
+
+    public abstract V bindModel();
+
+    public interface OnUIThreadListener<T> {
         public void onResult(T result);
     }
 }

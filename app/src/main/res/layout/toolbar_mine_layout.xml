@@ -2,8 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="50dp"
-    android:orientation="horizontal"
-    android:background="@color/main_bottom_bg">
+    android:background="@color/main_bottom_bg"
+    android:orientation="horizontal">
 
     <LinearLayout
         android:layout_width="0dp"
@@ -16,8 +16,7 @@
             android:id="@+id/iv_left"
             android:layout_width="25dp"
             android:layout_height="25dp"
-            android:layout_marginLeft="12dp"
-            />
+            android:layout_marginLeft="12dp" />
     </LinearLayout>
 
     <LinearLayout
@@ -27,10 +26,13 @@
         android:gravity="center"
         android:orientation="horizontal">
 
-        <ImageView
+        <TextView
             android:id="@+id/iv_title"
-            android:layout_width="128dp"
-            android:layout_height="22dp" />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="我的"
+            android:textColor="@android:color/black"
+            android:textSize="20sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -41,10 +43,18 @@
         android:orientation="horizontal">
 
         <ImageView
-            android:id="@+id/iv_right"
+            android:id="@+id/iv_model"
             android:layout_width="25dp"
             android:layout_height="25dp"
-            android:layout_marginEnd="12dp"
-            android:src="@mipmap/essence_right" />
+            android:layout_marginRight="12dp"
+            android:src="@drawable/main_mine_night_model_selector" />
+
+        <ImageView
+            android:id="@+id/iv_setting"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="12dp"
+            android:src="@drawable/main_mine_setting_selector" />
     </LinearLayout>
 </LinearLayout>

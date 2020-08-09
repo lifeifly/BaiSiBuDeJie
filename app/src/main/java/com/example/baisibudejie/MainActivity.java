@@ -2,7 +2,6 @@ package com.example.baisibudejie;
 
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTabHost;
 
@@ -15,8 +14,8 @@ import android.widget.TabHost;
 import android.widget.TextView;
 
 import com.example.baisibudejie.projects.attention.view.AttentionFragment;
-import com.example.baisibudejie.projects.essence.view.NewPostFragment;
-import com.example.baisibudejie.projects.home.view.EssenceFragment;
+import com.example.baisibudejie.projects.newpost.view.NewPostFragment;
+import com.example.baisibudejie.projects.essence.view.EssenceFragment;
 import com.example.baisibudejie.projects.mine.view.MyFragment;
 import com.example.baisibudejie.projects.publish.view.PublishFragment;
 import com.example.baisibudejie.utils.ToastUtil;

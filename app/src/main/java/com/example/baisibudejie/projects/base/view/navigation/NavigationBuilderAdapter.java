@@ -2,10 +2,12 @@ package com.example.baisibudejie.projects.base.view.navigation;
 
 import android.content.Context;
 import android.content.IntentFilter;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 public abstract class NavigationBuilderAdapter implements NavigationBuilder {
     private Context context;
@@ -68,7 +70,18 @@ public abstract class NavigationBuilderAdapter implements NavigationBuilder {
         this.rightIconOnClickListener=listener;
         return this;
     }
-
+    public void setTitleTextView(int viewId, String title, View.OnClickListener onClickListener){
+        TextView textView = (TextView)getContentView().findViewById(viewId);
+        if (TextUtils.isEmpty(title)){
+            textView.setVisibility(View.GONE);
+        }else {
+            textView.setVisibility(View.VISIBLE);
+            textView.setText(title);
+        }
+        if (onClickListener != null){
+            textView.setOnClickListener(onClickListener);
+        }
+    }
     @Override
     public void createAndBind(ViewGroup parent) {
         contentView= LayoutInflater.from(getContext()).inflate(getLayoutId(), (ViewGroup) parent,false);

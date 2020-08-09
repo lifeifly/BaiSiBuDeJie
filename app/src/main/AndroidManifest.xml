@@ -30,6 +30,8 @@
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
 
         </activity>
+        <activity android:name=".projects.mine.view.LoginActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar"/>
     </application>
 
 </manifest>

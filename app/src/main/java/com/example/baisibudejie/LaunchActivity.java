@@ -6,20 +6,9 @@ import android.animation.ObjectAnimator;
 import android.content.Intent;
 import android.os.Bundle;
 
-import com.example.baisibudejie.bean.PostListBean;
-import com.example.baisibudejie.projects.base.presenter.BasePresenter;
-import com.example.baisibudejie.projects.home.presenter.EssenceVideoPresenter;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
-
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 
 import android.view.View;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
-
-import java.util.List;
 
 public class LaunchActivity extends AppCompatActivity {
 
@@ -28,7 +17,14 @@ public class LaunchActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_launch);
         //android6.0及以上需要动态申请权限
-
+        // 你们平时做启动页
+        // 总结：
+        // 有四种解决方案（企业级开发主要就是这四种方案）
+        // 第一种方案：属性动画ObjectAnimator实现－－－－
+        // 第二种方案：补间动画实现(例如：TranslateAnimation、ScaleAnimation、AlphaAnimation、RotateAnimation)
+        // 第三种方案：定时器Timer实现
+        // 第四种方案：Handler+Thread实现－－－AsyncTask封装
+        // 今天采用第一种方案
         //属性动画
         /**target 你要对哪个View绑定动画，对imageView绑定动画
          *propertyNmae 你要执行什么动画属性名称  例如缩放、平移

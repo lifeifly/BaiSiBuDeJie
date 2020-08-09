@@ -9,7 +9,6 @@ import com.example.baisibudejie.R;
 import com.example.baisibudejie.projects.attention.adapter.AttentionAdapter;
 import com.example.baisibudejie.projects.attention.view.navigation.AttentionNavigationBuilder;
 import com.example.baisibudejie.projects.base.view.BaseFragment;
-import com.example.baisibudejie.projects.essence.view.navigation.NewPostNavigationBuilder;
 import com.example.baisibudejie.utils.ToastUtil;
 import com.google.android.material.tabs.TabLayout;
 
@@ -34,16 +33,8 @@ public class AttentionFragment extends BaseFragment {
 
     private void initToolBar(View viewContent) {
         AttentionNavigationBuilder builder = new AttentionNavigationBuilder(getContext());
-        builder.setTitleIcon(R.drawable.icon_splash)
-                .setTitleLeftIcon(R.mipmap.newpost_left)
-                .setTitleRightIcon(R.mipmap.attention_right)
+        builder.setTitleLeftIcon(R.drawable.main_newpost_audit_btn_selector)
                 .setLeftIconOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        ToastUtil.showToast(getContext(), "点击了");
-                    }
-                })
-                .setRightIconOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
                         ToastUtil.showToast(getContext(), "点击了");
